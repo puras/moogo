@@ -91,15 +91,6 @@ func renderTemplate(w http.ResponseWriter, tmpl string, p *Page) {
   if err != nil {
     http.Error(w, err.Error(), http.StatusInternalServerError)
   }
-  // t, err := template.ParseFiles(tmpl + ".html")
-  // if err != nil {
-  //   http.Error(w, err.Error(), http.StatusInternalServerError)
-  //   return
-  // }
-  // err = t.Execute(w, p)
-  // if err != nil {
-  //   http.Error(w, err.Error(), http.StatusInternalServerError)
-  // }
 }
 
 func getTitle(w http.ResponseWriter, req *http.Request) (title string, err error) {
